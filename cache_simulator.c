@@ -6,14 +6,6 @@
 #define TRUE 1
 #define FALSE 0
 
-
-//#define DEFAULT_CACHE_SIZE (8 * 1024)
-//#define DEFAULT_CACHE_BLOCK_SIZE 1
-//#define DEFAULT_CACHE_ASSOC 1
-//#define DEFAULT_CACHE_WRITEBACK TRUE
-//#define DEFAULT_CACHE_NOWRITEALLOC FALSE
-//#define DEFAULT_VICTIMCACHE_SIZE 16
-
 void read_write();
 void cache_victim();
 void lrupolicy();
@@ -196,7 +188,7 @@ void cache_victim()
 }
 
 
-/****************************************************************FULLY ASSCOCIATIVE************************************************************* */
+	/***********THIS IS FOR FULLY ASSCOCIATIVE CACHE************/
 
 if(assoc ==1 )
 {
@@ -690,7 +682,7 @@ cache_write_hit = cache_write_hit +1;cache_write_miss=cache_write_miss+1;cache_w
 	printf("\n Traffic = %d", traffic);
 		}
 
-/****************************************************************DIRECT ASSOCIATIVITY**********************************************************/
+/********************DIRECT ASSOCIATIVE CACHE********************/
 
 if (assoc == 2)
 {
@@ -1314,7 +1306,7 @@ traffic++;
 
 
 
-/****************************************************Set Associativity*************************************************************/
+/********************SET ASSOCIATIVE CACHE**************************/
 
 if ( assoc == 3)
 {
